@@ -25,6 +25,7 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        this.setTitle("Profile Activity");
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Drivers");
 
@@ -64,6 +65,4 @@ public class ProfileActivity extends AppCompatActivity {
         databaseReference.child(key).setValue(driver);
         Toast.makeText(getApplicationContext(),"Driver info is added",Toast.LENGTH_LONG).show();
     }
-
-
 }
